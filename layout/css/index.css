@@ -1,0 +1,72 @@
+@import "./reset.css";
+@import "../fonts/fonts.css";
+
+@import "./header.css";
+@import "./carts.css";
+
+:root {
+  --white: #ffffff;
+  --black: #414141;
+  --green: #70c05b;
+  --green-2: #008c49;
+  --yellow: #fca21c;
+  --orange: #ff6633;
+  --orange-2: #fcd5ba;
+  --blue: #1cb9fc;
+  --silver: #606060;
+  --red: #d80000;
+  --cream: #fbf8ec;
+  --cream-2: #f9f4e2;
+
+  --primery: var(--green);
+  --primery-hover: var(--green-2);
+
+  --secondary: var(--orange);
+  --secondary-disabled: var(--orange-2);
+
+  --error: var(--red);
+  --success: var(--green-2);
+  --background: var(--cream);
+  --background-footer: var(--cream-2);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-family: "Rubik", sans-serif;
+}
+.main {
+  background-color: var(--background);
+  flex: 1 1 auto;
+}
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style-type: none;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  max-width: 75rem;
+  margin: 0px auto;
+}
+
+/* .content {
+  flex: 1 0 auto;
+} */
+
+footer {
+  background-color: #008c49;
+}

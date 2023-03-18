@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <title>Fake store</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__row">
+            <div class="header__logo">
+              <span class="header__logo-img">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 120.91 143.85"
+                  class="header__logo-svg"
+                >
+                  <linearGradient
+                    id="a"
+                    x1="14.91"
+                    x2="94.08"
+                    y1="96.19"
+                    y2="17.02"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0" stop-color="#ff6e40" />
+                    <stop offset=".99" stop-color="#ffd740" />
+                  </linearGradient>
+                  <linearGradient
+                    id="b"
+                    x1="25.33"
+                    x2="104.5"
+                    y1="105.37"
+                    y2="26.19"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset=".01" stop-color="#ffd740" />
+                    <stop offset="1" stop-color="#ff6e40" />
+                  </linearGradient>
+                  <path
+                    d="M109 54.49c0 39.17-54.5 78.34-54.5 78.34S0 93.66 0 54.49a54.5 54.5 0 0 1 109 0Z"
+                    style="fill: url(#a)"
+                  />
+                  <path
+                    d="M119.41 63.66c0 39.17-54.49 78.34-54.49 78.34s-54.5-39.17-54.5-78.34a54.5 54.5 0 0 1 109 0Z"
+                    style="
+                      stroke: #fff;
+                      stroke-miterlimit: 10;
+                      stroke-width: 3px;
+                      fill: url(#b);
+                    "
+                  />
+                  <path
+                    d="M64.92 46a20.79 20.79 0 0 0-19.6 14.12h39.19A20.78 20.78 0 0 0 64.92 46Z"
+                    style="fill: none"
+                  />
+                  <path
+                    d="m98.49 74.39.38-2.49A34.35 34.35 0 1 0 64.92 101a34.19 34.19 0 0 0 24.29-10L78.69 80.47a19.41 19.41 0 0 1-13.77 5.74A19.64 19.64 0 0 1 47 74.39h25.61l-7.69-7.69 7.69 7.69M64.92 46a20.78 20.78 0 0 1 19.59 14.16H45.32A20.79 20.79 0 0 1 64.92 46Z"
+                    style="fill: #fff"
+                  />
+                </svg>
+              </span>
+              <div class="header__logo-title">Online shop</div>
+            </div>
+            <div class="header__catalog-body">
+              <svg class="header__catalog-svg">
+                <use href="../images/svg/3line.svg#3line"></use>
+              </svg>
+              <span class="header__catalog-title">Каталог</span>
+            </div>
+            <div class="header__search">
+              <form>
+                <input
+                  type="text"
+                  placeholder="Найти товар"
+                  class="header__search-input"
+                />
+
+                <svg class="header__search-svg">
+                  <use href="../images/svg/search.svg#search"></use>
+                </svg>
+              </form>
+            </div>
+            <ul class="header__menu-group">
+              <li class="header__menu-body">
+                <div class="header__menu-icon">
+                  <svg class="header__menu-svg" viewBox="0 -2 24 24">
+                    <use href="../images/SVG/like.svg#like"></use>
+                  </svg>
+                </div>
+                <span class="header__menu-title">Избранное</span>
+              </li>
+              <li class="header__menu-body">
+                <span class="header__menu-icon">
+                  <svg class="header__menu-svg">
+                    <use href="../images/svg/orders.svg#orders"></use>
+                  </svg>
+                </span>
+
+                <span class="header__menu-title">Заказы</span>
+              </li>
+              <li class="header__menu-body">
+                <div class="header__menu-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M5.5 21C5.5 19.6193 6.61929 18.5 8 18.5C9.38071 18.5 10.5 19.6193 10.5 21C10.5 22.3807 9.38071 23.5 8 23.5C6.61929 23.5 5.5 22.3807 5.5 21ZM8 19.5C7.17157 19.5 6.5 20.1716 6.5 21C6.5 21.8284 7.17157 22.5 8 22.5C8.82843 22.5 9.5 21.8284 9.5 21C9.5 20.1716 8.82843 19.5 8 19.5Z"
+                      fill="#414141"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.5 21C17.5 19.6193 18.6193 18.5 20 18.5C21.3807 18.5 22.5 19.6193 22.5 21C22.5 22.3807 21.3807 23.5 20 23.5C18.6193 23.5 17.5 22.3807 17.5 21ZM20 19.5C19.1716 19.5 18.5 20.1716 18.5 21C18.5 21.8284 19.1716 22.5 20 22.5C20.8284 22.5 21.5 21.8284 21.5 21C21.5 20.1716 20.8284 19.5 20 19.5Z"
+                      fill="#414141"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M1 0.5C0.723858 0.5 0.5 0.723858 0.5 1C0.5 1.27614 0.723858 1.5 1 1.5H4.58051C5.33783 5.79147 6.10333 10.0643 6.74931 14.3709C6.93288 15.5947 7.98416 16.5 9.22165 16.5H19.3597C20.5514 16.5 21.5774 15.6588 21.8111 14.4903L23.2503 7.29417C23.436 6.36599 22.726 5.5 21.7795 5.5H7.16046C6.8575 5.5 6.57797 5.58901 6.34436 5.74093L5.49239 0.913107C5.45023 0.674179 5.24262 0.5 5 0.5H1ZM6.666 7.07417C6.62065 6.77187 6.85478 6.5 7.16046 6.5H21.7795C22.095 6.5 22.3316 6.78866 22.2698 7.09806L20.8305 14.2942C20.6903 14.9953 20.0747 15.5 19.3597 15.5H9.22165C8.47916 15.5 7.84839 14.9568 7.73825 14.2225L6.666 7.07417Z"
+                      fill="#414141"
+                    />
+                    <path
+                      d="M22 4C22 6.20914 20.2091 8 18 8C15.7909 8 14 6.20914 14 4C14 1.79086 15.7909 0 18 0C20.2091 0 22 1.79086 22 4Z"
+                      fill="#FF6633"
+                    />
+                  </svg>
+                </div>
+                <span class="header__menu-title">Корзина</span>
+              </li>
+            </ul>
+
+            <div class="header__button-auth">
+              <span class="header__button-title">Войти</span>
+
+              <svg class="header__button-svg">
+                <use href="../images/svg/log-in.svg#log-in"></use>
+              </svg>
+            </div>
+
+            <div class="header__user">
+              <div class="header__user-img">
+                <img src="../images/avatar.png" alt="avatar" />
+              </div>
+              <span class="header__user-name">Алексей</span>
+              <span class="header__user-icon">
+                <svg class="header__user-svg">
+                  <use href="../images/svg/daw.svg#daw"></use>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="container">
+          <div class="carts">
+            <div class="carts__header">
+              <div class="carts__title">Акции</div>
+              <div class="carts__subtitle">
+                <div class="carts__subtitle-text">Все акции</div>
+
+                <svg
+                  width="8"
+                  height="14"
+                  viewBox="0 0 8 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="carts__subtitle-svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0.646447 0.646447C0.841709 0.451184 1.15829 0.451184 1.35355 0.646447L7.35355 6.64645C7.54882 6.84171 7.54882 7.15829 7.35355 7.35355L1.35355 13.3536C1.15829 13.5488 0.841709 13.5488 0.646447 13.3536C0.451184 13.1583 0.451184 12.8417 0.646447 12.6464L6.29289 7L0.646447 1.35355C0.451184 1.15829 0.451184 0.841709 0.646447 0.646447Z"
+                    fill="#606060"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="carts__body">
+              <div class="carts__main">
+                <div class="cart">
+                  <div class="cart__item">
+                    <div class="cart__img">
+                      <img src="#" acl="item_img" />
+                    </div>
+                    <div class="cart__body">
+                      <div class="cart__body-price">300 р</div>
+                      <div class="cart__body-title">Наушники</div>
+                    </div>
+                    <button class="cart__button">В корзину</button>
+                  </div>
+                </div>
+              </div>
+              <div class="carts__main">
+                <div class="cart">
+                  <div class="cart__item">
+                    <div class="cart__img">
+                      <img src="#" acl="item_img" />
+                    </div>
+                    <div class="cart__body">
+                      <div class="cart__body-price">300 р</div>
+                      <div class="cart__body-title">Наушники</div>
+                    </div>
+                    <button class="cart__button">В корзину</button>
+                  </div>
+                </div>
+              </div>
+              <div class="carts__main">
+                <div class="cart">
+                  <div class="cart__item">
+                    <div class="cart__img">
+                      <img src="#" acl="item_img" />
+                    </div>
+                    <div class="cart__body">
+                      <div class="cart__body-price">300 р</div>
+                      <div class="cart__body-title">Наушники</div>
+                    </div>
+                    <button class="cart__button">В корзину</button>
+                  </div>
+                </div>
+              </div>
+              <div class="carts__main">
+                <div class="cart">
+                  <div class="cart__item">
+                    <div class="cart__img">
+                      <img src="#" acl="item_img" />
+                    </div>
+                    <div class="cart__body">
+                      <div class="cart__body-price">300 р</div>
+                      <div class="cart__body-title">Наушники</div>
+                    </div>
+                    <button class="cart__button">В корзину</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="carts">
+            <div class="carts__header">
+              <div class="carts__title">Акции</div>
+              <div class="carts__subtitle">
+                <div class="carts__subtitle-text">Все акции</div>
+
+                <svg
+                  width="8"
+                  height="14"
+                  viewBox="0 0 8 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="carts__subtitle-svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0.646447 0.646447C0.841709 0.451184 1.15829 0.451184 1.35355 0.646447L7.35355 6.64645C7.54882 6.84171 7.54882 7.15829 7.35355 7.35355L1.35355 13.3536C1.15829 13.5488 0.841709 13.5488 0.646447 13.3536C0.451184 13.1583 0.451184 12.8417 0.646447 12.6464L6.29289 7L0.646447 1.35355C0.451184 1.15829 0.451184 0.841709 0.646447 0.646447Z"
+                    fill="#606060"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="carts__body">
+              <div class="carts__main">
+                <div class="cart">
+                  <div class="cart__item">
+                    <div class="cart__img">
+                      <img src="#" acl="item_img" />
+                    </div>
+                    <div class="cart__body">
+                      <div class="cart__body-price">300 р</div>
+                      <div class="cart__body-title">Наушники</div>
+                    </div>
+                    <button class="cart__button">В корзину</button>
+                  </div>
+                </div>
+              </div>
+              <div class="carts__main">
+                <div class="cart">
+                  <div class="cart__item">
+                    <div class="cart__img">
+                      <img src="#" acl="item_img" />
+                    </div>
+                    <div class="cart__body">
+                      <div class="cart__body-price">300 р</div>
+                      <div class="cart__body-title">Наушники</div>
+                    </div>
+                    <button class="cart__button">В корзину</button>
+                  </div>
+                </div>
+              </div>
+              <div class="carts__main">
+                <div class="cart">
+                  <div class="cart__item">
+                    <div class="cart__img">
+                      <img src="#" acl="item_img" />
+                    </div>
+                    <div class="cart__body">
+                      <div class="cart__body-price">300 р</div>
+                      <div class="cart__body-title">Наушники</div>
+                    </div>
+                    <button class="cart__button">В корзину</button>
+                  </div>
+                </div>
+              </div>
+              <div class="carts__main">
+                <div class="cart">
+                  <div class="cart__item">
+                    <div class="cart__img">
+                      <img src="#" acl="item_img" />
+                    </div>
+                    <div class="cart__body">
+                      <div class="cart__body-price">300 р</div>
+                      <div class="cart__body-title">Наушники</div>
+                    </div>
+                    <button class="cart__button">В корзину</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </main>
+
+      <footer><div class="container">footer</div></footer>
+    </div>
+  </body>
+</html>
