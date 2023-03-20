@@ -6,6 +6,7 @@
 @import "./items-header.css";
 @import "./articles.css";
 @import "./footer.css";
+@import "./modal.css";
 
 :root {
   --white: #ffffff;
@@ -42,6 +43,7 @@ html,
 body {
   height: 100%;
   font-family: "Rubik", sans-serif;
+  line-height: 150%;
 }
 .main {
   background-color: var(--background);

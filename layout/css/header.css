@@ -94,11 +94,10 @@
 @media screen and (max-width: 650px) {
   .header__search {
     flex: 1 1 80%;
-    /* flex-grow: 7; */
   }
 }
 .header__search-input {
-  padding: 0.5rem 2.65rem 0.5rem 1rem;
+  padding: 0.5rem 0rem 0.5rem 1rem;
   width: 100%;
   border: 1px solid var(--primery);
   border-radius: 0.25rem;
