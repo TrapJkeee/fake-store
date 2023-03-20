@@ -3,6 +3,8 @@
 
 @import "./header.css";
 @import "./carts.css";
+@import "./items-header.css";
+@import "./articles.css";
 
 :root {
   --white: #ffffff;
