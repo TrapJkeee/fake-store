@@ -1,0 +1,40 @@
+.footer {
+  background-color: var(--background-footer);
+}
+
+.footer__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 2.5rem;
+}
+.footer__logo-svg {
+  width: 4rem;
+  height: 4rem;
+}
+.footer__links {
+  display: flex;
+  flex: 1 1 auto;
+}
+.footer__links-body {
+  display: flex;
+  justify-content: flex-start;
+
+  gap: 3rem;
+}
+
+.footer__link {
+  line-height: 150%;
+  color: var(--black);
+}
+
+.footer__icons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer__icon {
+  width: 2rem;
+  height: 2rem;
+}

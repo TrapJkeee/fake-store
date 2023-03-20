@@ -5,6 +5,7 @@
 @import "./carts.css";
 @import "./items-header.css";
 @import "./articles.css";
+@import "./footer.css";
 
 :root {
   --white: #ffffff;
@@ -18,7 +19,7 @@
   --silver: #606060;
   --red: #d80000;
   --cream: #fbf8ec;
-  --cream-2: #f9f4e2;
+  --cream-2: #e7e1cc;
 
   --primery: var(--green);
   --primery-hover: var(--green-2);
@@ -65,10 +66,14 @@ ul {
   margin: 0px auto;
 }
 
-/* .content {
-  flex: 1 0 auto;
-} */
+@media screen and (max-width: 1225px) {
+  .container {
+    max-width: 48rem;
+  }
+}
 
-footer {
-  background-color: #008c49;
+@media screen and (max-width: 650px) {
+  .container {
+    max-width: 22.5rem;
+  }
 }
