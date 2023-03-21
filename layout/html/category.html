@@ -215,7 +215,7 @@
 
       <main class="main">
         <div class="container">
-          <section class="product">
+          <section class="category">
             <div class="card-header">
               <div class="card-header__body card-header__body_chain">
                 <div class="card-header__subtitle">
@@ -259,54 +259,106 @@
                 <div class="card-header__subtitle">
                   <div class="card-header__subtitle-text">Наушники</div>
                 </div>
-                <svg
-                    width="8"
-                    height="14"
-                    viewBox="0 0 8 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="card-header__subtitle-svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M0.646447 0.646447C0.841709 0.451184 1.15829 0.451184 1.35355 0.646447L7.35355 6.64645C7.54882 6.84171 7.54882 7.15829 7.35355 7.35355L1.35355 13.3536C1.15829 13.5488 0.841709 13.5488 0.646447 13.3536C0.451184 13.1583 0.451184 12.8417 0.646447 12.6464L6.29289 7L0.646447 1.35355C0.451184 1.15829 0.451184 0.841709 0.646447 0.646447Z"
-                      fill="#606060"
-                    />
-                  </svg>
-                </div>
-                <div class="card-header__subtitle">
-                  <div class="card-header__subtitle-text">Наушник</div>
-                </div>
               </div>
             </div>
-            <section class="product__item">
-              <div class="product__title">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam
-                itaque atque rerum totam at alias vitae, pariatur incidunt
-                cupiditate voluptates nisi quam quod modi voluptatum quo laborum
-                ullam et temporibus.
-              </div>
-              <div class="product__body">
-                <div class="product__img"></div>
-                <div class="product__cart">
-                  <div class="product__cart-price">300.00 r</div>
-                  <button class="product__cart-button">В козину</button>
-                  <!-- <button class="product__cart-button product__cart-button-add">
-                    1
-                  </button> -->
-
-                  <div class="product__cart-info">
-                    <p>
-                      Бренд -
-                      <strong class="product__cart-info_strong"
-                        >наушники</strong
+            <section class="category__items">
+              <h1 class="category__title">Наушники</h1>
+              <div class="category__body">
+                <div class="category__filter">
+                  <div class="category__filter-title">Фильтр</div>
+                  <div class="category__filter-price-body">
+                    <div class="category__filter-price-body-subtitle">
+                      <div class="category__filter-price-body-subtitle-text">
+                        Цена
+                      </div>
+                      <button
+                        class="category__filter-price-body-subtitle-button"
                       >
-                    </p>
-                    <p>
-                      Страна -
-                      <strong class="product__cart-info_strong">Россия</strong>
-                    </p>
+                        Очистить
+                      </button>
+                    </div>
+                    <div class="category__filter-price-body-range">
+                      <input
+                        class="category__filter-price-body-range-inputNumber"
+                        type="number"
+                        min="1"
+                        max="10000"
+                      />
+                      <svg
+                        width="40"
+                        height="20"
+                        viewBox="0 0 16 4"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="category__filter-price-body-range-svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M0.5 1C0.5 0.723858 0.723858 0.5 1 0.5H15C15.2761 0.5 15.5 0.723858 15.5 1C15.5 1.27614 15.2761 1.5 15 1.5H1C0.723858 1.5 0.5 1.27614 0.5 1Z"
+                          fill="#414141"
+                        />
+                      </svg>
+                      <input
+                        class="category__filter-price-body-range-inputNumber"
+                        type="number"
+                        min="1"
+                        max="10000"
+                      />
+                    </div>
+                    <input
+                      class="category__filter-price-body-range-inputRange"
+                      type="range"
+                      min="0"
+                      max="10000"
+                    />
+                    <button class="category__filter-button">Применить</button>
+                  </div>
+                </div>
+                <div class="category__group">
+                  <section class="cart">
+                    <div class="cart__img">
+                      <img src="#" acl="item_img" />
+                    </div>
+                    <div class="cart__price">300 р</div>
+                    <div class="cart__title">Наушники</div>
+                    <button class="cart__button cart__button_buy">
+                      В корзину
+                    </button>
+                    <!-- <button class="cart__button cart__button_add-item">1</button> -->
+                  </section>
+                  <div class="category__pagination">
+                    <svg
+                      width="8"
+                      height="14"
+                      viewBox="0 0 8 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="category__pagination-svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M7.35355 0.646447C7.54882 0.841709 7.54882 1.15829 7.35355 1.35355L1.70711 7L7.35355 12.6464C7.54882 12.8417 7.54882 13.1583 7.35355 13.3536C7.15829 13.5488 6.84171 13.5488 6.64645 13.3536L0.646447 7.35355C0.451184 7.15829 0.451184 6.84171 0.646447 6.64645L6.64645 0.646447C6.84171 0.451184 7.15829 0.451184 7.35355 0.646447Z"
+                        fill="#414141"
+                      />
+                    </svg>
+                    <div class="category__pagination-item"></div>
+                    <svg
+                      width="8"
+                      height="14"
+                      viewBox="0 0 8 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="category__pagination-svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0.646447 0.646447C0.841709 0.451184 1.15829 0.451184 1.35355 0.646447L7.35355 6.64645C7.54882 6.84171 7.54882 7.15829 7.35355 7.35355L1.35355 13.3536C1.15829 13.5488 0.841709 13.5488 0.646447 13.3536C0.451184 13.1583 0.451184 12.8417 0.646447 12.6464L6.29289 7L0.646447 1.35355C0.451184 1.15829 0.451184 0.841709 0.646447 0.646447Z"
+                        fill="#414141"
+                      />
+                    </svg>
                   </div>
                 </div>
               </div>

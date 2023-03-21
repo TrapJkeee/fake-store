@@ -4,8 +4,7 @@
 
   padding-top: 2.5rem;
 }
-
-.card-header__body_product-info {
+.card-header__body_chain {
   justify-content: flex-start;
   gap: 0.5rem;
 }
@@ -30,6 +29,5 @@
 }
 
 .card-header__subtitle-text {
-  line-height: 150%;
   padding-right: 0.5rem;
 }

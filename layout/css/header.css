@@ -103,6 +103,9 @@
   border: 1px solid var(--primery);
   border-radius: 0.25rem;
 }
+.header__search-input:focus {
+  outline-color: var(--primery);
+}
 .header__search-icon {
 }
 .header__search-svg {
