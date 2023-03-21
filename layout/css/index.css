@@ -3,10 +3,11 @@
 
 @import "./header.css";
 @import "./carts.css";
-@import "./items-header.css";
+@import "./cart-header.css";
 @import "./articles.css";
 @import "./footer.css";
 @import "./modal.css";
+@import "./product.css";
 
 :root {
   --white: #ffffff;
@@ -57,6 +58,15 @@ a:visited {
 ul {
   list-style-type: none;
 }
+button {
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
 .wrapper {
   min-height: 100%;
   overflow: hidden;

@@ -27,6 +27,7 @@
 .footer__link {
   line-height: 150%;
   color: var(--black);
+  cursor: pointer;
 }
 
 .footer__icons {
@@ -37,4 +38,5 @@
 .footer__icon {
   width: 2rem;
   height: 2rem;
+  cursor: pointer;
 }

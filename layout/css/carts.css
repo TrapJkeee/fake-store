@@ -19,6 +19,7 @@
   gap: 0.5rem;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .cart__img {

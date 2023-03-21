@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/index.css" />
-    <title>Fake store</title>
+
+    <title>Fake Store</title>
   </head>
   <body>
     <div class="wrapper">
@@ -214,12 +215,11 @@
 
       <main class="main">
         <div class="container">
-          <section class="carts">
+          <section class="product">
             <div class="card-header">
-              <div class="card-header__body">
-                <div class="card-header__title">Акции</div>
+              <div class="card-header__body card-header__body_product-info">
                 <div class="card-header__subtitle">
-                  <div class="card-header__subtitle-text">Все акции</div>
+                  <div class="card-header__subtitle-text">Главная</div>
 
                   <svg
                     width="8"
@@ -237,92 +237,59 @@
                     />
                   </svg>
                 </div>
-              </div>
-            </div>
-            <div class="carts__body">
-              <section class="cart">
-                <div class="cart__img">
-                  <img src="#" acl="item_img" />
-                </div>
-                <div class="cart__price">300 р</div>
-                <div class="cart__title">Наушники</div>
-                <button class="cart__button cart__button_buy">В корзину</button>
-                <!-- <button class="cart__button cart__button_add-item">1</button> -->
-              </section>
-            </div>
-          </section>
+                <div class="card-header__subtitle">
+                  <div class="card-header__subtitle-text">Каталог</div>
 
-          <section>
-            <div class="articles">
-              <div class="items-header">
-                <div class="items-header__body">
-                  <div class="items-header__title">Статьи</div>
-                  <div class="items-header__subtitle">
-                    <div class="items-header__subtitle-text">all</div>
-                    <svg
-                      width="8"
-                      height="14"
-                      viewBox="0 0 8 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="items-header__subtitle-svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M0.646447 0.646447C0.841709 0.451184 1.15829 0.451184 1.35355 0.646447L7.35355 6.64645C7.54882 6.84171 7.54882 7.15829 7.35355 7.35355L1.35355 13.3536C1.15829 13.5488 0.841709 13.5488 0.646447 13.3536C0.451184 13.1583 0.451184 12.8417 0.646447 12.6464L6.29289 7L0.646447 1.35355C0.451184 1.15829 0.451184 0.841709 0.646447 0.646447Z"
-                        fill="#606060"
-                      />
-                    </svg>
-                  </div>
+                  <svg
+                    width="8"
+                    height="14"
+                    viewBox="0 0 8 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="card-header__subtitle-svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.646447 0.646447C0.841709 0.451184 1.15829 0.451184 1.35355 0.646447L7.35355 6.64645C7.54882 6.84171 7.54882 7.15829 7.35355 7.35355L1.35355 13.3536C1.15829 13.5488 0.841709 13.5488 0.646447 13.3536C0.451184 13.1583 0.451184 12.8417 0.646447 12.6464L6.29289 7L0.646447 1.35355C0.451184 1.15829 0.451184 0.841709 0.646447 0.646447Z"
+                      fill="#606060"
+                    />
+                  </svg>
+                </div>
+                <div class="card-header__subtitle">
+                  <div class="card-header__subtitle-text">Наушники</div>
                 </div>
               </div>
-              <div class="articles__body">
-                <article class="article">
-                  <div class="article__img">
-                    <img src="#" acl="item_img" />
-                  </div>
-                  <div class="article__date">20.02.2022</div>
-                  <div class="article__title">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nihil, ad.
-                  </div>
-                  <div class="article__text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Delectus consequuntur, provident quam id vero nobis minima,
-                    commodi quisq
-                  </div>
-                  <button class="article__button">Подробнее</button>
-                </article>
+            </div>
+            <div class="product__item">
+              <div class="product__title">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam
+                itaque atque rerum totam at alias vitae, pariatur incidunt
+                cupiditate voluptates nisi quam quod modi voluptatum quo laborum
+                ullam et temporibus.
+              </div>
+              <div class="product__body">
+                <div class="product__img"></div>
+                <div class="product__cart">
+                  <div class="product__cart-price">300.00 r</div>
+                  <button class="product__cart-button">В козину</button>
+                  <!-- <button class="product__cart-button product__cart-button-add">
+                    1
+                  </button> -->
 
-                <article class="article">
-                  <div class="article__img">
-                    <img src="#" acl="item_img" />
+                  <div class="product__cart-info">
+                    <p>
+                      Бренд -
+                      <strong class="product__cart-info_strong"
+                        >наушники</strong
+                      >
+                    </p>
+                    <p>
+                      Страна -
+                      <strong class="product__cart-info_strong">Россия</strong>
+                    </p>
                   </div>
-                  <div class="article__date">20.02.2022</div>
-                  <div class="article__title">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nihil, ad.
-                  </div>
-                  <div class="article__text">Lorem i</div>
-                  <button class="article__button">Подробнее</button>
-                </article>
-
-                <article class="article">
-                  <div class="article__img">
-                    <img src="#" acl="item_img" />
-                  </div>
-                  <div class="article__date">20.02.2022</div>
-                  <div class="article__title">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nihil, ad.
-                  </div>
-                  <div class="article__text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Delectus cons
-                  </div>
-                  <button class="article__button">Подробнее</button>
-                </article>
+                </div>
               </div>
             </div>
           </section>

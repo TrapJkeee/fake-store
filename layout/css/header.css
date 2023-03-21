@@ -53,6 +53,7 @@
   background-color: var(--primery);
   border-radius: 0.25rem;
   align-items: center;
+  cursor: pointer;
 }
 .header__catalog-svg {
   width: 1.85rem;
@@ -125,6 +126,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .header__menu-icon {
 }
@@ -158,6 +160,7 @@
   height: 2.5rem;
   background-color: var(--secondary);
   border-radius: 0.25rem;
+  cursor: pointer;
 }
 .header__button-title {
   line-height: 150%;
