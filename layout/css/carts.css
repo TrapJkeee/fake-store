@@ -43,9 +43,6 @@
   flex: 1 1 auto;
 }
 .cart__button {
-  /* width: 16rem; */
-  /* height: 2.5rem; */
-  border-style: solid;
   border-radius: 0.1rem;
   margin: 0.5rem;
   padding: 0.5rem;
