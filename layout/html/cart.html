@@ -215,7 +215,7 @@
 
       <main class="main">
         <div class="container">
-          <section class="catalog">
+          <section class="carts">
             <div class="card-header">
               <div class="card-header__body card-header__body_chain">
                 <div class="card-header__subtitle">
@@ -238,62 +238,61 @@
                   </svg>
                 </div>
                 <div class="card-header__subtitle">
-                  <div class="card-header__subtitle-text">Каталог</div>
+                  <div class="card-header__subtitle-text">Корзина</div>
                 </div>
               </div>
             </div>
-            <section class="catalog__items">
-              <h1 class="catalog__title">Каталог</h1>
-              <div class="catalog__body">
-                <div class="catalog__item">
-                  <img class="catalog__img" alt="image-category" />
-                  <div class="catalog__text">Наушники</div>
-                </div>
-                <div class="catalog__item">
-                  <img class="catalog__img" alt="image-category" />
-                  <div class="catalog__text">Наушники</div>
-                </div>
-                <div class="catalog__item">
-                  <img class="catalog__img" alt="image-category" />
-                  <div class="catalog__text">Наушники</div>
-                </div>
-                <div class="catalog__item">
-                  <img class="catalog__img" alt="image-category" />
-                  <div class="catalog__text">Наушники</div>
-                </div>
-                <div class="catalog__item">
-                  <img class="catalog__img" alt="image-category" />
-                  <div class="catalog__text">Наушники</div>
-                </div>
-                <div class="catalog__item">
-                  <img class="catalog__img" alt="image-category" />
-                  <div class="catalog__text">Наушники</div>
-                </div>
-                <div class="catalog__item">
-                  <img class="catalog__img" alt="image-category" />
-                  <div class="catalog__text">Наушники</div>
-                </div>
-                <div class="catalog__item">
-                  <img class="catalog__img" alt="image-category" />
-                  <div class="catalog__text">Наушники</div>
-                </div>
-                <div class="catalog__item">
-                  <img class="catalog__img" alt="image-category" />
-                  <div class="catalog__text">Наушники</div>
-                </div>
-                <div class="catalog__item">
-                  <img class="catalog__img" alt="image-category" />
-                  <div class="catalog__text">Наушники</div>
-                </div>
-                <div class="catalog__item">
-                  <img class="catalog__img" alt="image-category" />
-                  <div class="catalog__text">Наушники</div>
-                </div>
-                <div class="catalog__item">
-                  <img class="catalog__img" alt="image-category" />
-                  <div class="catalog__text">Наушники</div>
-                </div>
+            <div class="carts__title">Корзина</div>
+
+            <section class="carts__body">
+              <div class="carts__group">
+                <section class="cart">
+                  <div class="cart__item">
+                    <div class="cart__info">
+                      <img scr="" alt="img-product" class="cart__img" />
+
+                      <div class="cart__text">
+                        <span class="cart__title">Наушники</span>
+                        <div class="cart__subtitle">300 ₽</div>
+                      </div>
+                      <div class="cart__right">
+                        <button class="cart__button">1</button>
+                        <span class="cart__total">300&nbsp₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="cart">
+                  <div class="cart__item">
+                    <div class="cart__info">
+                      <img scr="" alt="img-product" class="cart__img" />
+
+                      <div class="cart__text">
+                        <span class="cart__title">Наушники</span>
+                        <div class="cart__subtitle">300 ₽</div>
+                      </div>
+                      <div class="cart__right">
+                        <button class="cart__button">1</button>
+                        <span class="cart__total">3000&nbsp₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </section>
               </div>
+
+              <section class="cart__order">
+                <div class="cart__order-info">
+                  <span class="order__text">1 Товар</span>
+                  <span class="order__text">300 ₽</span>
+                </div>
+                <div class="cart__order-total">
+                  <span class="cart__order-text">Итог</span>
+                  <span class="cart__order-text cart__order-text_strong"
+                    >300 ₽</span
+                  >
+                </div>
+                <button class="cart__order-button">Оформить заказ</button>
+              </section>
             </section>
           </section>
         </div>

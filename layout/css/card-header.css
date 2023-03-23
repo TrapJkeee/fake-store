@@ -27,6 +27,9 @@
   color: var(--silver);
   cursor: pointer;
 }
+.card-header__subtitle:hover {
+  text-decoration: underline;
+}
 
 .card-header__subtitle-text {
   padding-right: 0.5rem;

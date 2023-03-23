@@ -2,14 +2,15 @@
 @import "../fonts/fonts.css";
 
 @import "./header.css";
-@import "./carts.css";
-@import "./cart-header.css";
+@import "./product.css";
+@import "./card-header.css";
 @import "./articles.css";
 @import "./footer.css";
 @import "./modal.css";
-@import "./product.css";
+@import "./product-info.css";
 @import "./catalog.css";
 @import "./category.css";
+@import "./cart.css";
 
 :root {
   --white: #ffffff;
