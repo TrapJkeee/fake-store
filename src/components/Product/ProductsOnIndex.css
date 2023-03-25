@@ -1,0 +1,12 @@
+.products__body {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.5rem;
+  padding-top: 2.5rem;
+}
+@media screen and (max-width: 1225px) {
+  .products__body {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

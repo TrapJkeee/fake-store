@@ -1,0 +1,11 @@
+.footer__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 2.5rem;
+}
+.footer__logo {
+  object-fit: cover;
+  width: 4rem;
+}

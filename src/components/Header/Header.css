@@ -1,0 +1,4 @@
+.header {
+  background-color: var(--white);
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+}

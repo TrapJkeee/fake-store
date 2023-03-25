@@ -1,0 +1,95 @@
+@import "./reset.css";
+@import "./fonts/fonts.css";
+
+/* @import "./header.css";
+@import "./product.css";
+@import "./card-header.css";
+@import "./articles.css";
+@import "./footer.css";
+@import "./modal.css";
+@import "./product-info.css";
+@import "./catalog.css";
+@import "./category.css";
+@import "./cart.css"; */
+
+:root {
+  --white: #ffffff;
+  --black: #414141;
+  --green: #70c05b;
+  --green-2: #008c49;
+  --yellow: #fca21c;
+  --orange: #ff6633;
+  --orange-2: #fcd5ba;
+  --blue: #1cb9fc;
+  --silver: #606060;
+  --red: #d80000;
+  --cream: #fbf8ec;
+  --cream-2: #e7e1cc;
+
+  --primery: var(--green);
+  --primery-hover: var(--green-2);
+
+  --secondary: var(--orange);
+  --secondary-disabled: var(--orange-2);
+
+  --error: var(--red);
+  --success: var(--green-2);
+  --background: var(--cream);
+  --background-footer: var(--cream-2);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-family: "Rubik", sans-serif;
+  line-height: 150%;
+}
+.main {
+  background-color: var(--background);
+  flex: 1 1 auto;
+}
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style-type: none;
+}
+button {
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid;
+  border-radius: 4px;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  max-width: 75rem;
+  margin: 0px auto;
+}
+
+@media screen and (max-width: 1225px) {
+  .container {
+    max-width: 48rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    max-width: 22.5rem;
+  }
+}

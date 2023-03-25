@@ -1,0 +1,19 @@
+.header__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0.5rem 0;
+}
+@media screen and (max-width: 1000px) {
+  .header__row {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .header__row {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,36 @@
+.card-header__body {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 2.5rem;
+}
+.card-header__body_chain {
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+@media screen and (max-width: 769px) {
+  .card-header__body {
+    padding: 2rem 1rem 0;
+  }
+}
+.card-header__title {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 150%;
+  color: var(--black);
+}
+.card-header__subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--silver);
+}
+.card-header__subtitle:not(:last-child):hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.card-header__subtitle-text {
+  padding-right: 0.5rem;
+}

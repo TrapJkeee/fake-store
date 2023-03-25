@@ -1,0 +1,33 @@
+/* search */
+.header__search {
+  position: relative;
+  width: 23.35rem;
+}
+@media screen and (max-width: 1225px) {
+  .header__search {
+    width: 16.1rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .header__search {
+    flex: 1 1 80%;
+  }
+}
+.header__search-input {
+  padding: 0.5rem 0rem 0.5rem 1rem;
+  width: 100%;
+  border: 1px solid var(--primery);
+  border-radius: 0.25rem;
+}
+.header__search-input:focus {
+  outline-color: var(--primery);
+}
+
+.header__search-svg {
+  position: absolute;
+  top: 0.45rem;
+  right: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}

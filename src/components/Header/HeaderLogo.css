@@ -1,0 +1,22 @@
+.header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header__logo-img {
+  object-fit: cover;
+  width: 2.5rem;
+  height: 100%;
+  align-self: center;
+}
+.header__logo-title {
+  color: black;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 769px) {
+  .header__logo-title {
+    display: none;
+  }
+}

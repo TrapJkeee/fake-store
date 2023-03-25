@@ -1,0 +1,10 @@
+.footer__icons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer__icon {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
