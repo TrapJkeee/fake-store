@@ -1,0 +1,36 @@
+.category__body {
+  display: flex;
+  gap: 1.25rem;
+}
+
+@media screen and (max-width: 1225px) {
+  .category__body {
+  }
+}
+@media screen and (max-width: 769px) {
+  .category__body {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.category__group {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+.category__group-items {
+  display: flex;
+  gap: 2.5rem;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1225px) {
+  .category__group-items {
+    justify-content: center;
+    gap: 1.25rem;
+  }
+}

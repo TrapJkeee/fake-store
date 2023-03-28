@@ -2,29 +2,37 @@ import HeartSVG from "../../assets/svg/HeartSVG";
 import OrdersSVG from "../../assets/svg/OrdersSVG";
 import CartSVG from "../../assets/svg/CartSVG";
 import "./HeaderMenu.css";
+import { NavLink } from "react-router-dom";
+
 const HeaderMenu = () => {
   return (
     <ul className="header__menu-group">
-      <li className="header__menu-body header__menu-body_cursor-non">
+      <NavLink
+        to="/"
+        className="header__menu-body header__menu-body_cursor-non"
+      >
         <span className="header__menu-svg">
           <HeartSVG />
         </span>
         <span className="header__menu-title">Избранное</span>
-      </li>
-      <li className="header__menu-body header__menu-body_cursor-non">
+      </NavLink>
+      <NavLink
+        to="/"
+        className="header__menu-body header__menu-body_cursor-non"
+      >
         <span className="header__menu-svg">
           <OrdersSVG />
         </span>
 
         <span className="header__menu-title">Заказы</span>
-      </li>
-      <li className="header__menu-body">
+      </NavLink>
+      <NavLink to="/catalog" className="header__menu-body">
         <span className="header__menu-span">1</span>
         <span className="header__menu-svg">
           <CartSVG />
         </span>
         <span className="header__menu-title">Корзина</span>
-      </li>
+      </NavLink>
     </ul>
   );
 };

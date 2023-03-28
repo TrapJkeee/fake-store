@@ -1,0 +1,20 @@
+.rc-slider-track {
+  background-color: var(--primery);
+}
+.rc-slider-handle {
+  background-color: var(--primery);
+}
+
+.rc-slider-handle:focus-visible {
+  border-color: var(--primery);
+  box-shadow: 0 0 0 3px #96dbfa;
+}
+.rc-slider-handle:hover {
+  border-color: var(--primery);
+}
+.rc-slider-handle:active {
+  border-color: var(--primery);
+  box-shadow: 0 0 5px var(--primery);
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}

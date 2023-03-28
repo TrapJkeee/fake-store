@@ -1,0 +1,58 @@
+.category__filter {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.category__filter-title {
+  font-weight: 700;
+  color: var(--black);
+  background-color: var(--background-footer);
+  padding: 0.75rem;
+}
+.category__filter-price-body {
+  display: flex;
+  flex-direction: column;
+}
+.category__filter-price-body-subtitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.category__filter-price-body-subtitle-text {
+  font-weight: 700;
+
+  color: var(--black);
+}
+.category__filter-price-body-subtitle-button {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  color: var(--silver);
+  border: 1px solid var(--silver);
+}
+.category__filter-price-body-range {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.75rem;
+  line-height: 2rem;
+}
+.category__filter-price-body-range-inputNumber {
+  color: var(--black);
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--black);
+  width: 100%;
+  border-radius: 4px;
+}
+.category__filter-price-body-range-inputRange {
+  padding: 0.5rem 0;
+}
+
+.category__filter-button {
+  width: 100%;
+  background: var(--secondary);
+  border-radius: 4px;
+  color: var(--white);
+  padding: 0.5rem;
+}

@@ -1,0 +1,17 @@
+.category__items {
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem;
+}
+.category__title {
+  font-weight: 700;
+  font-size: 3rem;
+  color: var(--black);
+  padding-top: 1.5rem;
+}
+
+@media screen and (max-width: 769px) {
+  .category__title {
+    padding: 2rem 1rem 0;
+  }
+}

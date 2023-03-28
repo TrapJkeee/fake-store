@@ -1,13 +1,9 @@
-import Articles from "../Article/Articles";
-import ProductsOnIndex from "../Product/ProductsOnIndex";
-
-const Main = () => {
+import Container from "../UI/Container";
+import "./Main.css";
+const Main = ({ children }) => {
   return (
     <main className="main">
-      <div className="container">
-        <ProductsOnIndex />
-        <Articles />
-      </div>
+      <Container>{children}</Container>
     </main>
   );
 };

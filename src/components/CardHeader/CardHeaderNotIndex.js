@@ -12,6 +12,10 @@ const CardHeaderNotIndex = () => {
         </div>
         <div class="card-header__subtitle">
           <div class="card-header__subtitle-text">Каталог</div>
+          <DawRightSVG />
+        </div>
+        <div class="card-header__subtitle">
+          <div class="card-header__subtitle-text">Наушники</div>
         </div>
       </div>
     </div>

@@ -1,17 +1,6 @@
 @import "./reset.css";
 @import "./fonts/fonts.css";
 
-/* @import "./header.css";
-@import "./product.css";
-@import "./card-header.css";
-@import "./articles.css";
-@import "./footer.css";
-@import "./modal.css";
-@import "./product-info.css";
-@import "./catalog.css";
-@import "./category.css";
-@import "./cart.css"; */
-
 :root {
   --white: #ffffff;
   --black: #414141;
@@ -49,10 +38,7 @@ body {
   font-family: "Rubik", sans-serif;
   line-height: 150%;
 }
-.main {
-  background-color: var(--background);
-  flex: 1 1 auto;
-}
+
 a,
 a:visited {
   text-decoration: none;
