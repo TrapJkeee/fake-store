@@ -1,22 +1,26 @@
+import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
 import Product from "../Product/Product";
 import CategoryFilter from "./CategoryFilter";
-import CategoryPagination from "./CategoryPagination";
-import { useSelector } from "react-redux";
+
 import "./CategoryBody.css";
-import { useParams } from "react-router-dom";
+import { useState } from "react";
+
 const CategoryBody = () => {
   const productItems = useSelector((state) => state.products.products);
-  const params = useParams();
+  const { category } = useParams();
 
   const filterProducts = productItems.filter(
-    (item) => item.category === params.category
+    (item) => item.category === category
   );
 
   const price = filterProducts.map((item) => item.price);
 
+  const productFilterPrice = (minPrice, maxPrice) => {};
+
   return (
     <div className="category__body">
-      <CategoryFilter price={price} />
+      <CategoryFilter price={price} applyValue={productFilterPrice} />
       <div className="category__group">
         <div className="category__group-items">
           {filterProducts.map((item) => (

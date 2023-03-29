@@ -4,11 +4,11 @@ import "./CardHeader.css";
 
 const CardHeader = ({ title, text }) => {
   return (
-    <div class="card-header">
-      <div class="card-header__body">
-        <div class="card-header__title">{title}</div>
-        <div class="card-header__subtitle">
-          <div class="card-header__subtitle-text">{text}</div>
+    <div className="card-header">
+      <div className="card-header__body">
+        <div className="card-header__title">{title}</div>
+        <div className="card-header__subtitle">
+          <div className="card-header__subtitle-text">{text}</div>
           <DawRightSVG />
         </div>
       </div>

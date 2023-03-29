@@ -1,3 +1,9 @@
+.product-info__title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--black);
+  padding-top: 1.5rem;
+}
 @media screen and (max-width: 769px) {
   .product-info__title {
     padding: 2rem 1rem 0;
@@ -28,7 +34,6 @@
 .product-info__img {
   width: 504px;
   height: 100%;
-  background: #e07474;
   object-fit: cover;
 }
 @media screen and (max-width: 769px) {

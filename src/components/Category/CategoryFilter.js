@@ -1,45 +1,78 @@
 import HyphenSVG from "../../assets/svg/HyphenSVG";
+import RangeSlider from "../UI/RangeSlider";
+
 import "react-range-slider-input/dist/style.css";
 import "./CategoryFilter.css";
-import RangeSlider from "../UI/RangeSlider";
-const CategoryFilter = ({ price }) => {
-  const maxPrice = Math.max(...price);
+import { useEffect, useState } from "react";
+const CategoryFilter = ({ price, applyValue }) => {
   const minPrice = Math.min(...price);
+  const maxPrice = Math.max(...price);
+  const [minInputValue, setMinInputValue] = useState();
+  const [maxInputValue, setMaxInputValue] = useState();
+
+  useEffect(() => {
+    setTimeout(() => {
+      setMinInputValue(minPrice);
+      setMaxInputValue(maxPrice);
+    }, 1);
+  }, [minPrice, maxPrice]);
+
+  const inputRangeHandler = (e) => {
+    setMinInputValue(e[0]);
+    setMaxInputValue(e[1]);
+  };
+
+  const clearInputHandler = () => {
+    setMinInputValue(minPrice);
+    setMaxInputValue(maxPrice);
+  };
+
+  const applyValueHandler = () => {
+    applyValue(minInputValue, maxInputValue);
+  };
+
   return (
     <div className="category__filter">
       <div className="category__filter-title">Фильтр</div>
       <div className="category__filter-price-body">
         <div className="category__filter-price-body-subtitle">
           <div className="category__filter-price-body-subtitle-text">Цена</div>
-          <button className="category__filter-price-body-subtitle-button">
-            Очистить
+          <button
+            className="category__filter-price-body-subtitle-button"
+            onClick={clearInputHandler}
+          >
+            Сбросить
           </button>
         </div>
         <div className="category__filter-price-body-range">
           <input
             className="category__filter-price-body-range-inputNumber"
             type="number"
-            defaultValue={minPrice}
             min={minPrice}
             max={maxPrice}
+            value={minInputValue}
           />
           <HyphenSVG />
           <input
             className="category__filter-price-body-range-inputNumber"
             type="number"
-            defaultValue={maxPrice}
             min={minPrice}
             max={maxPrice}
+            value={maxInputValue}
           />
         </div>
         <div className="category__filter-price-body-range-inputRange">
           <RangeSlider
             min={minPrice}
             max={maxPrice}
-            defaultValue={[minPrice, maxPrice]}
+            allowCross={false}
+            onChange={inputRangeHandler}
+            value={[minInputValue, maxInputValue]}
           />
         </div>
-        <button className="category__filter-button">Применить</button>
+        <button className="category__filter-button" onClick={applyValueHandler}>
+          Применить
+        </button>
       </div>
     </div>
   );

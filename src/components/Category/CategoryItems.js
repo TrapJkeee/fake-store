@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import CategoryBody from "./CategoryBody";
 import "./CategoryItems.css";
-const CatrgoryItems = () => {
+const CategoryItems = () => {
   const params = useParams();
   const title = params.category[0].toUpperCase() + params.category.slice(1);
 
@@ -13,4 +13,4 @@ const CatrgoryItems = () => {
   );
 };
 
-export default CatrgoryItems;
+export default CategoryItems;

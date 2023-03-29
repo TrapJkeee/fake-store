@@ -1,16 +1,23 @@
-import { Link } from "react-router-dom";
 import "./FooterLinks.css";
 
 const FooterLinks = () => {
   return (
     <nav className="footer__links">
       <ul className="footer__links-body">
-        <Link to="https://github.com/TrapJkeee" className="footer__link">
+        <a
+          href="https://github.com/TrapJkeee"
+          target="_blank"
+          className="footer__link"
+        >
           GitHub
-        </Link>
-        <Link to="https://t.me/trapjkeee" className="footer__link">
+        </a>
+        <a
+          href="https://t.me/trapjkeee"
+          target="_blank"
+          className="footer__link"
+        >
           Telegram
-        </Link>
+        </a>
       </ul>
     </nav>
   );

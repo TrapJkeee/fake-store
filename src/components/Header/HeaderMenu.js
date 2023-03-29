@@ -26,7 +26,7 @@ const HeaderMenu = () => {
 
         <span className="header__menu-title">Заказы</span>
       </NavLink>
-      <NavLink to="/catalog" className="header__menu-body">
+      <NavLink to="/cart" className="header__menu-body">
         <span className="header__menu-span">1</span>
         <span className="header__menu-svg">
           <CartSVG />

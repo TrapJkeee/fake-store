@@ -1,0 +1,24 @@
+.carts__title {
+  font-weight: 700;
+  font-size: 4rem;
+  color: var(--black);
+  padding-top: 24px;
+}
+.carts__body {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 0;
+}
+@media screen and (max-width: 769px) {
+  .carts__body {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+.carts__group {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 860px;
+}

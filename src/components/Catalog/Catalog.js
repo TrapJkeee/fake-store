@@ -4,7 +4,6 @@ import CatalogItems from "./CatalogItems";
 const Catalog = () => {
   return (
     <section className="catalog">
-      <CardHeaderNotIndex />
       <CatalogItems />
     </section>
   );
