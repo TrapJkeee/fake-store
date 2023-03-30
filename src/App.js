@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { getProducts } from "./store/products-slice";
 import { Navigate, Route, Routes } from "react-router-dom";
@@ -7,7 +7,6 @@ import Layout from "./components/UI/Layout";
 import CatalogPage from "./components/pages/CatalogPage";
 import CategoryPage from "./components/pages/CategoryPage";
 import ProductInfoPage from "./components/pages/ProductInfoPage";
-import Footer from "./components/Footer/Footer";
 import NotFoundPage from "./components/pages/NotFoundPage";
 import CartPage from "./components/pages/CartPage";
 
@@ -16,7 +15,7 @@ function App() {
 
   useEffect(() => {
     dispatch(getProducts());
-  }, []);
+  }, [dispatch]);
 
   return (
     <Routes>

@@ -69,30 +69,23 @@
   padding: 1rem;
   font-size: 24px;
   width: 200px;
-  height: auto;
+  height: 58px;
   background-color: var(--secondary);
   color: var(--white);
   border-color: var(--secondary);
 }
 
-.product-info__button-add {
+.product-info__button-add-item {
   background-color: var(--primery);
   color: var(--white);
   border: var(--primery);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 58px;
 }
 
-.product-info__button-add::after {
-  content: "+";
-  position: relative;
-  font-size: 2rem;
-}
-
-.product-info__button-add::before {
-  content: "-";
-  position: relative;
+.product__button_add-item_mark {
   font-size: 2rem;
 }
 

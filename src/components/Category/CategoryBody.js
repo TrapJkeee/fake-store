@@ -1,10 +1,8 @@
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import Product from "../Product/Product";
-import CategoryFilter from "./CategoryFilter";
 
 import "./CategoryBody.css";
-import { useState } from "react";
 
 const CategoryBody = () => {
   const productItems = useSelector((state) => state.products.products);
@@ -14,13 +12,8 @@ const CategoryBody = () => {
     (item) => item.category === category
   );
 
-  const price = filterProducts.map((item) => item.price);
-
-  const productFilterPrice = (minPrice, maxPrice) => {};
-
   return (
     <div className="category__body">
-      <CategoryFilter price={price} applyValue={productFilterPrice} />
       <div className="category__group">
         <div className="category__group-items">
           {filterProducts.map((item) => (

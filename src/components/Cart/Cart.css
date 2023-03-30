@@ -29,7 +29,7 @@
   justify-content: space-between;
   color: var(--black);
   padding: 10px 0;
-  width: 536px;
+  width: 500px;
 }
 @media screen and (max-width: 1225px) {
   .cart__text {

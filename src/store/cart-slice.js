@@ -1,6 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = { items: [], itemsQuantity: 0 };
+const initialState = {
+  items: [],
+  itemsQuantity: 0,
+  isCartContentChange: false,
+};
 
 const cartSlice = createSlice({
   name: "cart",
@@ -10,6 +14,7 @@ const cartSlice = createSlice({
       const newItem = action.payload;
       const existingItem = state.items.find((item) => item.id === newItem.id);
       state.itemsQuantity++;
+      state.isCartContentChange = true;
 
       if (!existingItem) {
         state.items.push({
@@ -18,11 +23,27 @@ const cartSlice = createSlice({
           quantity: 1,
           totalPrice: newItem.price,
           title: newItem.title,
-          img: newItem.image,
+          img: newItem.img,
+          selected: true,
         });
       } else {
         existingItem.quantity++;
         existingItem.totalPrice = existingItem.price * existingItem.quantity;
+      }
+    },
+    removeItem(state, action) {
+      const id = action.payload;
+
+      const existingItem = state.items.find((item) => item.id === id);
+
+      if (existingItem.quantity === 1) {
+        state.items = state.items.filter((item) => item.id !== id);
+        state.itemsQuantity--;
+      } else {
+        state.itemsQuantity--;
+
+        existingItem.quantity--;
+        existingItem.totalPrice = existingItem.totalPrice - existingItem.price;
       }
     },
   },

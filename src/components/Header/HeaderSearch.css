@@ -14,6 +14,7 @@
     flex: 1 1 80%;
   }
 }
+
 .header__search-input {
   padding: 0.5rem 0rem 0.5rem 1rem;
   width: 100%;
@@ -30,4 +31,23 @@
   right: 0.5rem;
   width: 1.5rem;
   height: 1.5rem;
+}
+
+.header__search-items {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0.5rem 0rem 0.5rem 1rem;
+  width: 100%;
+  border: 1px solid var(--primery);
+  border-top: 0px;
+  border-radius: 0.25rem;
+  background-color: var(--white);
+  z-index: 10;
+}
+
+@media screen and (max-width: 1225px) {
+  .header__search-items {
+    font-size: 0.8rem;
+  }
 }

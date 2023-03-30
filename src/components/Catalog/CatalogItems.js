@@ -5,6 +5,7 @@ import "./CatalogItems.css";
 const CatalogItems = () => {
   const productCategories = useSelector((state) => state.products.category);
 
+  console.log(productCategories);
   return (
     <section className="catalog__items">
       <h1 className="catalog__title">Каталог</h1>

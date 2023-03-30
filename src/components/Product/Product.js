@@ -1,26 +1,46 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
+import { cartActions } from "../../store/cart-slice";
+
 import "./Product.css";
 const Product = ({ id, title, img, price }) => {
   const { pathname } = useLocation();
-  const [isWasClick, setIsWasClick] = useState(false);
-  const clickHandler = () => {
-    setIsWasClick(true);
+  const dispatch = useDispatch();
+
+  const items = useSelector((state) => state.cart.items);
+  const currentItem = items.find((item) => item.id === id);
+
+  const addItemHandler = () => {
+    dispatch(cartActions.addItem({ id, title, img, price }));
   };
-  const button = isWasClick ? (
+
+  const removeItemHandler = () => {
+    dispatch(cartActions.removeItem(id));
+  };
+
+  const button = currentItem ? (
     <button className="product__button product__button_add-item">
-      <span className="product__button_add-item_mark">-</span>
-      <span>2</span>
-      <span className="product__button_add-item_mark">+</span>
+      <span
+        className="product__button_add-item_mark"
+        onClick={removeItemHandler}
+      >
+        -
+      </span>
+      <span>{currentItem.quantity}</span>
+      <span className="product__button_add-item_mark" onClick={addItemHandler}>
+        +
+      </span>
     </button>
   ) : (
     <button
-      onClick={clickHandler}
+      onClick={addItemHandler}
       className="product__button product__button_buy"
     >
       В корзину
     </button>
   );
+
   return (
     <div className="product">
       <div className="product__item">
