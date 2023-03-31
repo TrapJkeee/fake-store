@@ -11,6 +11,14 @@
   flex-grow: 1;
   gap: 10px;
 }
+@media screen and (max-width: 769px) {
+  .cart__info {
+    justify-content: flex-start;
+    flex-grow: 1;
+
+    flex-wrap: wrap;
+  }
+}
 @media screen and (max-width: 650px) {
   .cart__info {
     justify-content: flex-start;
@@ -72,13 +80,3 @@
 .cart__button_mark {
   font-size: 2rem;
 }
-/* .cart__button::after {
-  content: "+";
-  position: relative;
-}
-
-.cart__button::before {
-  content: "-";
-  position: relative;
-  font-size: 2rem;
-} */

@@ -9,6 +9,7 @@ import CategoryPage from "./components/pages/CategoryPage";
 import ProductInfoPage from "./components/pages/ProductInfoPage";
 import NotFoundPage from "./components/pages/NotFoundPage";
 import CartPage from "./components/pages/CartPage";
+import OrderPage from "./components/pages/OrderPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -25,6 +26,7 @@ function App() {
         <Route path="category/:category" element={<CategoryPage />} />
         <Route path="category/:category/:title" element={<ProductInfoPage />} />
         <Route path="cart" element={<CartPage />} />
+        <Route path="order" element={<OrderPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>

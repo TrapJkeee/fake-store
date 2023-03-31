@@ -14,7 +14,6 @@ const cartSlice = createSlice({
       const newItem = action.payload;
       const existingItem = state.items.find((item) => item.id === newItem.id);
       state.itemsQuantity++;
-      state.isCartContentChange = true;
 
       if (!existingItem) {
         state.items.push({
@@ -24,7 +23,6 @@ const cartSlice = createSlice({
           totalPrice: newItem.price,
           title: newItem.title,
           img: newItem.img,
-          selected: true,
         });
       } else {
         existingItem.quantity++;

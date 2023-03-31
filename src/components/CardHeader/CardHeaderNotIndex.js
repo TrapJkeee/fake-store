@@ -62,6 +62,23 @@ const CardHeaderNotIndex = () => {
         </div>
       </div>
     );
+  if (location.pathname === "/order")
+    return (
+      <div className="card-header">
+        <div className="card-header__body card-header__body_chain">
+          <div className="card-header__subtitle">
+            <Link to="/catalog" className="card-header__subtitle-text">
+              Каталог
+            </Link>
+            <DawRightSVG />
+          </div>
+
+          <div className="card-header__subtitle">
+            <div className="card-header__subtitle-text">Заказы</div>
+          </div>
+        </div>
+      </div>
+    );
 };
 
 export default CardHeaderNotIndex;

@@ -7,12 +7,15 @@ const ProductInfoBody = () => {
   const dispatch = useDispatch();
 
   const products = useSelector((state) => state.products.products);
+  const items = useSelector((state) => state.cart.items);
+
+  if (products.length === 0) return;
+
   const currentProduct = products.find((item) => item.title === title);
 
   let { id, title: itemTitle, images: img, price, ...rest } = currentProduct;
 
   img = img[0];
-  const items = useSelector((state) => state.cart.items);
   const currentItem = items.find((item) => item.id === id);
 
   const addItemHandler = () => {

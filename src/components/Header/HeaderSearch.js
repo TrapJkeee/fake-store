@@ -16,6 +16,7 @@ const HeaderSearch = () => {
 
   const isInputFocusHandler = (isInpitFocus) => {
     setIsInputFocus(isInpitFocus);
+    setInputValue("");
   };
 
   return (
@@ -27,6 +28,7 @@ const HeaderSearch = () => {
           className="header__search-input"
           onChange={(e) => setInputValue(e.target.value)}
           onFocus={() => setIsInputFocus(true)}
+          value={inputValue}
         />
         {isInputFocus && inputValue && filteritems.length > 0 && (
           <ul className="header__search-items">
