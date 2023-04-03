@@ -2,11 +2,15 @@ import React from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
 import DawRightSVG from "../../assets/svg/DawRightSVG";
 import "./CardHeader.css";
+import { useSelector } from "react-redux";
 
 const CardHeaderNotIndex = () => {
   const location = useLocation();
   const params = useParams();
+  const products = useSelector((state) => state.products.products);
+  const currentProduct = products.find((item) => item.title === params.title);
 
+  console.log(currentProduct);
   if (location.pathname === "/catalog") {
     return (
       <div className="card-header">
@@ -31,10 +35,10 @@ const CardHeaderNotIndex = () => {
           </div>
           <div className="card-header__subtitle">
             <Link
-              to={`/category/${params.category}`}
+              to={`/category/${currentProduct.category}`}
               className="card-header__subtitle-text"
             >
-              {params.category}
+              {currentProduct.category}
             </Link>
             <DawRightSVG />
           </div>

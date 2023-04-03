@@ -1,7 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
-import { orderActions, sendOrder } from "../../store/order-slice";
+import { sendOrderActions } from "../../store/sendOrder-slice";
 import "./CartOrder.css";
-import { useEffect } from "react";
+import { cartActions } from "../../store/cart-slice";
+
+const sklonenie = (number, txt, cases = [2, 0, 1, 1, 1, 2]) =>
+  txt[
+    number % 100 > 4 && number % 100 < 20
+      ? 2
+      : cases[number % 10 < 5 ? number % 10 : 5]
+  ];
 
 const CartOrder = () => {
   const items = useSelector((state) => state.cart.items);
@@ -11,29 +18,14 @@ const CartOrder = () => {
     .reduce((sum, item) => sum + item);
   const dispatch = useDispatch();
 
-  const order = useSelector((state) => state.order);
+  const order = useSelector((state) => state.sendOrder);
 
-  useEffect(() => {
-    if (order.items.length > 0) {
-      dispatch(sendOrder(order));
-    }
-  }, [order]);
-  console.log(order);
-  const sklonenie = (number, txt, cases = [2, 0, 1, 1, 1, 2]) =>
-    txt[
-      number % 100 > 4 && number % 100 < 20
-        ? 2
-        : cases[number % 10 < 5 ? number % 10 : 5]
-    ];
+  const isOrderSend = useSelector((state) => state.sendOrder.isOrderSend);
 
   const addOrderHandler = () => {
-    dispatch(orderActions.addOrder({ items, totalPrice }));
-    dispatch(orderActions.clearOrder());
+    dispatch(sendOrderActions.addOrder({ items, totalPrice }));
+    dispatch(cartActions.clearCart());
   };
-
-  if (order.isOrderSend) {
-    return <div>asd</div>;
-  }
 
   return (
     <section className="cart__order">

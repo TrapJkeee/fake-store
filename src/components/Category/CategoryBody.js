@@ -23,6 +23,7 @@ const CategoryBody = () => {
               title={item.title}
               price={item.price}
               img={item.images[0]}
+              category={item.category}
             />
           ))}
         </div>

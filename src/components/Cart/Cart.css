@@ -22,7 +22,6 @@
 @media screen and (max-width: 650px) {
   .cart__info {
     justify-content: flex-start;
-
     flex-wrap: wrap;
   }
 }
@@ -41,7 +40,7 @@
 }
 @media screen and (max-width: 1225px) {
   .cart__text {
-    width: 250px;
+    width: 200px;
   }
 }
 @media screen and (max-width: 650px) {

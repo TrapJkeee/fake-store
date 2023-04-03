@@ -1,0 +1,13 @@
+.orders__title {
+  font-weight: 700;
+  font-size: 64px;
+  color: var(--black);
+  padding-top: 1.5rem;
+}
+.orders__body {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 80px;
+  padding-top: 62px;
+  gap: 60px;
+}

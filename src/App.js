@@ -1,5 +1,5 @@
-import { useCallback, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "./store/products-slice";
 import { Navigate, Route, Routes } from "react-router-dom";
 
@@ -10,13 +10,32 @@ import ProductInfoPage from "./components/pages/ProductInfoPage";
 import NotFoundPage from "./components/pages/NotFoundPage";
 import CartPage from "./components/pages/CartPage";
 import OrderPage from "./components/pages/OrderPage";
+import { sendOrder } from "./store/sendOrder-slice";
+import { getOrder } from "./store/getOrder-slice";
 
 function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getProducts());
-  }, [dispatch]);
+  }, []);
+
+  const order = useSelector((state) => state.sendOrder);
+  const isOrderSend = useSelector((state) => state.sendOrder.isOrderSend);
+
+  useEffect(() => {
+    if (order.items.length > 0) {
+      dispatch(sendOrder(order));
+    }
+  }, [order.items.length]);
+
+  useEffect(() => {
+    if (isOrderSend) {
+      setTimeout(() => {
+        dispatch(getOrder());
+      }, 1000);
+    }
+  }, [isOrderSend]);
 
   return (
     <Routes>
@@ -24,7 +43,7 @@ function App() {
         <Route index path="/" element={<Navigate to="catalog" />} />
         <Route path="catalog" element={<CatalogPage />} />
         <Route path="category/:category" element={<CategoryPage />} />
-        <Route path="category/:category/:title" element={<ProductInfoPage />} />
+        <Route path=":category/:title" element={<ProductInfoPage />} />
         <Route path="cart" element={<CartPage />} />
         <Route path="order" element={<OrderPage />} />
         <Route path="*" element={<NotFoundPage />} />

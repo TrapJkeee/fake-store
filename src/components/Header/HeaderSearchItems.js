@@ -3,10 +3,7 @@ import "./HeaderSearchItems.css";
 const HeaderSearchItems = ({ title, category, isInputFocus }) => {
   return (
     <li className="header__search-text">
-      <Link
-        to={`/category/${category}/${title}`}
-        onClick={() => isInputFocus(false)}
-      >
+      <Link to={`/${category}/${title}`} onClick={() => isInputFocus(false)}>
         {title}
       </Link>
     </li>

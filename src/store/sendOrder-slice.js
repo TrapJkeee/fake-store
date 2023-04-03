@@ -2,8 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = { items: [], date: "", totalPrice: 0, isOrderSend: false };
 
-const orderSlice = createSlice({
-  name: "order",
+const sendOrderSlice = createSlice({
+  name: "sendOrder",
   initialState,
   reducers: {
     addOrder(state, action) {
@@ -12,18 +12,22 @@ const orderSlice = createSlice({
       const month = `${nowDate.getMonth() + 1}`.padStart(2, `0`);
       const day = `${nowDate.getDate()}`.padStart(2, `0`);
       state.date = `${day}.${month}.${year}`;
-      state.totalPrice = state.totalPrice = action.payload.totalPrice;
+
+      state.totalPrice = action.payload.totalPrice;
       const items = action.payload.items;
       state.items = items;
+      state.isOrderSend = true;
     },
     clearOrder(state) {
-      state = initialState;
-      state.isOrderSend = true;
+      state.items = [];
+      state.date = "";
+      state.totalPrice = 0;
+      state.isOrderSend = false;
     },
   },
 });
 
-export const orderActions = orderSlice.actions;
+export const sendOrderActions = sendOrderSlice.actions;
 
 export const sendOrder = (order) => {
   return async (dispatchAction) => {
@@ -42,11 +46,12 @@ export const sendOrder = (order) => {
     };
 
     try {
-      postOrder();
+      await postOrder();
+      dispatchAction(sendOrderActions.clearOrder());
     } catch (e) {
       console.log(e);
     }
   };
 };
 
-export default orderSlice;
+export default sendOrderSlice;

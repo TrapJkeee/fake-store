@@ -1,18 +1,16 @@
-import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import { cartActions } from "../../store/cart-slice";
 
 import "./Product.css";
-const Product = ({ id, title, img, price }) => {
-  const { pathname } = useLocation();
+const Product = ({ id, title, img, price, category, quantity }) => {
   const dispatch = useDispatch();
-
+  const { pathname } = useLocation();
   const items = useSelector((state) => state.cart.items);
   const currentItem = items.find((item) => item.id === id);
 
   const addItemHandler = () => {
-    dispatch(cartActions.addItem({ id, title, img, price }));
+    dispatch(cartActions.addItem({ id, title, img, price, category }));
   };
 
   const removeItemHandler = () => {
@@ -41,12 +39,21 @@ const Product = ({ id, title, img, price }) => {
     </button>
   );
 
+  const priceOnOrder =
+    pathname === "/order" ? (
+      <div className="product__price">
+        $ {price.toFixed(2)} x {quantity}
+      </div>
+    ) : (
+      <div className="product__price">$ {price.toFixed(2)}</div>
+    );
+
   return (
     <div className="product">
       <div className="product__item">
-        <Link to={`${pathname}/${title}`} className="product__body">
+        <Link to={`/${category}/${title}`} className="product__body">
           <img src={img} alt="item_img" className="product__img" />
-          <div className="product__price">$ {price.toFixed(2)}</div>
+          {priceOnOrder}
           <div className="product__title">{title}</div>
         </Link>
         {button}

@@ -10,10 +10,7 @@ const HeaderMenu = () => {
 
   return (
     <ul className="header__menu-group">
-      <NavLink
-        to="/order"
-        className="header__menu-body header__menu-body_cursor-non"
-      >
+      <NavLink to="/order" className="header__menu-body">
         <span className="header__menu-svg">
           <OrdersSVG />
         </span>

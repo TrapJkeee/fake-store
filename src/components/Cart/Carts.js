@@ -19,6 +19,7 @@ const Carts = () => {
       </section>
     );
   }
+
   return (
     <section className="carts">
       <div className="carts__title">Корзина</div>

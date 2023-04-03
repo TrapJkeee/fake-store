@@ -24,12 +24,10 @@
 .product__price {
   font-weight: 700;
   font-size: 1.2rem;
-  line-height: 150%;
   color: var(--black);
   padding: 0 0.5rem;
 }
 .product__title {
-  line-height: 150%;
   color: var(--black);
   padding: 0 0.5rem;
   max-width: 100%;

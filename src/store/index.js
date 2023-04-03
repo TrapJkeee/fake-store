@@ -1,13 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
 import productsReduser from "./products-slice";
 import cartReduser from "./cart-slice";
-import orderReduser from "./order-slice";
+import sendOrderReduser from "./sendOrder-slice";
+import getOrderReduser from "./getOrder-slice";
 
 const store = configureStore({
   reducer: {
     products: productsReduser.reducer,
     cart: cartReduser.reducer,
-    order: orderReduser.reducer,
+    sendOrder: sendOrderReduser.reducer,
+    getOrder: getOrderReduser.reducer,
   },
 });
 
