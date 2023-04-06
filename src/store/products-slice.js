@@ -1,15 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialProductState = { products: [], category: [] };
+const initialState = { products: [], category: [] };
 
 const productsSlice = createSlice({
   name: "products",
-  initialState: initialProductState,
+  initialState,
   reducers: {
     addProducts(state, action) {
       state.products = action.payload;
     },
-
     addCategory(state, action) {
       const products = action.payload;
       for (const key of products) {

@@ -54,6 +54,7 @@ button {
   background-color: transparent;
   cursor: pointer;
   border: 1px solid;
+  /* border-width: 0px; */
   border-radius: 4px;
 }
 
