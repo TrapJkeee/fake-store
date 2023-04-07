@@ -1,8 +1,8 @@
+import { useSelector } from "react-redux";
 import Product from "../Product/Product";
 import "./OrderItem.css";
 
-const OrderItem = ({ items, date, totalPrice }) => {
-  console.log(items);
+const OrderItem = ({ items, date, totalPrice, userId }) => {
   return (
     <section className="order">
       <div className="order__body">

@@ -9,8 +9,6 @@ const MenuButtonAuth = () => {
   const dispatch = useDispatch();
   const isModalOpen = useSelector((state) => state.modal.isModalOpen);
 
-  console.log(isModalOpen);
-
   const openModalHandler = () => {
     dispatch(modalActions.openModal());
   };

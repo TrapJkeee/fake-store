@@ -13,7 +13,7 @@
   display: grid;
   grid-auto-flow: row;
   grid-template: repeat(3, 1fr) / repeat(4, 1fr);
-  gap: 2.5rem;
+  row-gap: 2.5rem;
   padding-bottom: 80px;
 }
 @media screen and (max-width: 1225px) {

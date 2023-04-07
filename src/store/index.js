@@ -1,17 +1,19 @@
 import { configureStore } from "@reduxjs/toolkit";
-import productsReduser from "./products-slice";
-import cartReduser from "./cart-slice";
-import sendOrderReduser from "./sendOrder-slice";
-import getOrderReduser from "./getOrder-slice";
-import modalReduser from "./modal-slice";
+import productsReducer from "./products-slice";
+import cartReducer from "./cart-slice";
+import sendOrderReducer from "./sendOrder-slice";
+import getOrderReducer from "./getOrder-slice";
+import modalReducer from "./modal-slice";
+import userReducer from "./user-slice";
 
 const store = configureStore({
   reducer: {
-    products: productsReduser.reducer,
-    cart: cartReduser.reducer,
-    sendOrder: sendOrderReduser.reducer,
-    getOrder: getOrderReduser.reducer,
-    modal: modalReduser.reducer,
+    products: productsReducer.reducer,
+    cart: cartReducer.reducer,
+    sendOrder: sendOrderReducer.reducer,
+    getOrder: getOrderReducer.reducer,
+    modal: modalReducer.reducer,
+    user: userReducer.reducer,
   },
 });
 

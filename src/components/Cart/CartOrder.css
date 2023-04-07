@@ -35,3 +35,8 @@
   padding: 1.2rem 1rem;
   color: var(--white);
 }
+
+.cart__order-button:disabled {
+  background: var(--secondary-disabled);
+  cursor: not-allowed;
+}

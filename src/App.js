@@ -23,6 +23,7 @@ function App() {
   const order = useSelector((state) => state.sendOrder);
   const isOrderSend = useSelector((state) => state.sendOrder.isOrderSend);
 
+  const isLogin = useSelector((state) => state.user.isLogin);
   useEffect(() => {
     if (order.items.length > 0) {
       dispatch(sendOrder(order));
@@ -30,12 +31,12 @@ function App() {
   }, [order.items.length]);
 
   useEffect(() => {
-    if (isOrderSend) {
+    if (isOrderSend || isLogin) {
       setTimeout(() => {
         dispatch(getOrder());
       }, 1000);
     }
-  }, [isOrderSend]);
+  }, [isOrderSend, isLogin]);
 
   return (
     <Routes>

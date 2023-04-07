@@ -1,6 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = { items: [], date: "", totalPrice: 0, isOrderSend: false };
+const initialState = {
+  items: [],
+  date: "",
+  totalPrice: 0,
+  isOrderSend: false,
+  userId: null,
+};
 
 const sendOrderSlice = createSlice({
   name: "sendOrder",
@@ -17,6 +23,7 @@ const sendOrderSlice = createSlice({
       const items = action.payload.items;
       state.items = items;
       state.isOrderSend = true;
+      state.userId = action.payload.userId;
     },
     clearOrder(state) {
       state.items = [];

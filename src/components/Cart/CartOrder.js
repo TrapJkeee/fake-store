@@ -16,14 +16,13 @@ const CartOrder = () => {
   const totalPrice = items
     .map((item) => item.totalPrice)
     .reduce((sum, item) => sum + item);
+  const isLogin = useSelector((state) => state.user.isLogin);
+  const userId = useSelector((state) => state.user.id);
+
   const dispatch = useDispatch();
 
-  const order = useSelector((state) => state.sendOrder);
-
-  const isOrderSend = useSelector((state) => state.sendOrder.isOrderSend);
-
   const addOrderHandler = () => {
-    dispatch(sendOrderActions.addOrder({ items, totalPrice }));
+    dispatch(sendOrderActions.addOrder({ items, totalPrice, userId }));
     dispatch(cartActions.clearCart());
   };
 
@@ -45,7 +44,11 @@ const CartOrder = () => {
           {totalPrice} $
         </span>
       </div>
-      <button className="cart__order-button" onClick={addOrderHandler}>
+      <button
+        className="cart__order-button"
+        onClick={addOrderHandler}
+        disabled={!isLogin}
+      >
         Оформить заказ
       </button>
     </section>

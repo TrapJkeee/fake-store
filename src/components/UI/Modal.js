@@ -1,10 +1,16 @@
 import { createPortal } from "react-dom";
-import CloseSVG from "../../assets/svg/CloseSVG";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { modalActions } from "../../store/modal-slice";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+} from "firebase/auth";
+import { userActions } from "../../store/user-slice";
 
+import CloseSVG from "../../assets/svg/CloseSVG";
 import "./Modal.css";
-import { useState } from "react";
 
 const Backdrop = ({ onHideCartHandel }) => {
   return <div className="backdrob" onClick={onHideCartHandel}></div>;
@@ -13,11 +19,45 @@ const Backdrop = ({ onHideCartHandel }) => {
 const ModalWindow = ({ onHideCartHandel }) => {
   const [isClickOnRegistration, setIsClickOnRegistration] = useState(false);
   const [isRegistration, setIsRegistration] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
+  const dispatch = useDispatch();
+
+  const loginHandler = (e) => {
+    e.preventDefault();
+
+    const auth = getAuth();
+    signInWithEmailAndPassword(auth, email, password)
+      .then(({ user }) => {
+        dispatch(
+          userActions.setUser({
+            email: user.email,
+            id: user.uid,
+            token: user.accessToken,
+          })
+        );
+        dispatch(modalActions.closeModal());
+      })
+      .catch(console.error);
+  };
+
+  const registerHandler = (e) => {
+    e.preventDefault();
+
+    const auth = getAuth();
+
+    createUserWithEmailAndPassword(auth, email, password)
+      .then(({ user }) => {})
+      .catch(console.error);
+
+    setIsRegistration(true);
+    setIsClickOnRegistration(false);
+  };
   const modalEnter = (
     <>
       <div className="modal__title">Вход</div>
-      <form action="" className="modal__data">
+      <form className="modal__data" onSubmit={loginHandler}>
         <label for="email" className="modal__label">
           Почта
         </label>
@@ -27,6 +67,7 @@ const ModalWindow = ({ onHideCartHandel }) => {
           name="email"
           placeholder="e-mail"
           className="modal__input"
+          onChange={(e) => setEmail(e.target.value)}
         />
         <label for="password" className="modal__label">
           Пароль
@@ -38,6 +79,7 @@ const ModalWindow = ({ onHideCartHandel }) => {
           name="password"
           placeholder="password"
           className="modal__input"
+          onChange={(e) => setPassword(e.target.value)}
         />
         <button className="modal__button">Войти</button>
       </form>
@@ -53,17 +95,7 @@ const ModalWindow = ({ onHideCartHandel }) => {
   const modalAuth = (
     <>
       <div className="modal__title">Регистрация</div>
-      <form action="" className="modal__data">
-        <label for="name" className="modal__label">
-          Имя
-        </label>
-        <input
-          id="text"
-          type="text"
-          name="name"
-          placeholder="Name"
-          className="modal__input"
-        />
+      <form className="modal__data" onSubmit={registerHandler}>
         <label for="email" className="modal__label">
           Почта
         </label>
@@ -73,6 +105,7 @@ const ModalWindow = ({ onHideCartHandel }) => {
           name="email"
           placeholder="e-mail"
           className="modal__input"
+          onChange={(e) => setEmail(e.target.value)}
         />
         <label for="password" className="modal__label">
           Пароль
@@ -84,11 +117,12 @@ const ModalWindow = ({ onHideCartHandel }) => {
           name="password"
           placeholder="password"
           className="modal__input"
+          onChange={(e) => setPassword(e.target.value)}
         />
         <button
-          type="button"
+          // type="button"
           className="modal__button"
-          onClick={() => setIsRegistration(true)}
+          // onClick={() => setIsRegistration(true)}
         >
           Зарегистрироваться
         </button>
@@ -109,9 +143,9 @@ const ModalWindow = ({ onHideCartHandel }) => {
     <div className="modal">
       <div className="modal__body">
         {!isClickOnRegistration && modalEnter}
+        {!isClickOnRegistration && isRegistration && modalInfo}
 
         {isClickOnRegistration && modalAuth}
-        {isClickOnRegistration && isRegistration && modalInfo}
       </div>
       <div className="modal__close" onClick={onHideCartHandel}>
         <CloseSVG />

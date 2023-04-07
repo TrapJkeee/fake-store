@@ -15,7 +15,6 @@
   width: 1.85rem;
   height: 1.85rem;
   margin: 0.62rem 0 0 0.62rem;
-  /* text-align: center; */
 }
 .header__catalog-title {
   padding: 0.5rem;
@@ -29,7 +28,7 @@
     width: 40px;
   }
   .header__catalog-title {
-    display: none;
+    /* display: none; */
   }
 }
 

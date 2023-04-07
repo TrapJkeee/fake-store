@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 12.8rem;
+  /* width: 12.8rem; */
   gap: 1.5rem;
 }
 .header__menu-body {

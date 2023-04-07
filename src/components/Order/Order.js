@@ -4,10 +4,12 @@ import OrderItem from "./OrderItem";
 import "./Order.css";
 const Order = () => {
   const orders = useSelector((state) => state.getOrder);
+  const getUserId = useSelector((state) => state.user.id);
+  const currentOrders = orders.filter((item) => item.userId === getUserId);
 
   const ordersItems =
-    orders.length > 0 ? (
-      orders.map((item) => (
+    currentOrders.length > 0 ? (
+      currentOrders.map((item) => (
         <OrderItem
           key={item.id}
           id={item.id}

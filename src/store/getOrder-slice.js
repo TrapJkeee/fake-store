@@ -8,21 +8,17 @@ const getOrderSlice = createSlice({
   reducers: {
     addOrder(state, action) {
       const orders = action.payload;
-
       for (const key in orders) {
-        // const existingOrder = state
-        //   .map((item) => item.id)
-        //   .find((item) => item === key);
-        // console.log(existingOrder, `existingOrder`);
-
-        // if (!existingOrder) {
-        state.push({
-          id: key,
-          items: orders[key].items,
-          date: orders[key].date,
-          totalPrice: orders[key].totalPrice,
-        });
-        // }
+        const existingOrder = state.find((item) => item.id === key);
+        if (!existingOrder) {
+          state.push({
+            id: key,
+            items: orders[key].items,
+            date: orders[key].date,
+            totalPrice: orders[key].totalPrice,
+            userId: orders[key].userId,
+          });
+        }
       }
     },
   },
@@ -45,9 +41,9 @@ export const getOrder = () => {
     };
 
     try {
-      const order = await fetchOrder();
+      const orders = await fetchOrder();
 
-      dispatchAction(getOrderActions.addOrder(order));
+      dispatchAction(getOrderActions.addOrder(orders));
     } catch (e) {
       console.log(e);
     }
