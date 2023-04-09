@@ -30,8 +30,8 @@
 }
 
 .header__user-icon {
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
   transform: translateY(3px);
 }
 

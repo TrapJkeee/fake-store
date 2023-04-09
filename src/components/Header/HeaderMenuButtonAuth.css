@@ -2,7 +2,6 @@
 
 .header__button-auth {
   display: flex;
-  /* display: none; */
   justify-content: center;
   align-items: center;
   width: 9.8rem;
@@ -30,8 +29,7 @@
 
 @media screen and (max-width: 1225px) {
   .header__button-auth {
-    width: 40px;
-    /* margin-right: 20px; */
+    width: 2.5rem;
   }
   .header__button-title {
     display: none;

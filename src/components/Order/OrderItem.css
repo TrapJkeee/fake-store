@@ -1,7 +1,7 @@
 .order__body {
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  gap: 2.1rem;
 }
 .order__title {
   display: flex;
@@ -9,11 +9,11 @@
 }
 .order__text {
   display: flex;
-  gap: 24px;
+  gap: 1.5rem;
 }
 .order__date {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 .order__info {
   display: inline-block;
@@ -21,13 +21,13 @@
   padding: 0.5rem;
 }
 .order__total-price {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: var(--black);
 }
 .order__item {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 @media screen and (max-width: 650px) {

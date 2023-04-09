@@ -37,7 +37,7 @@
   border-radius: 0.1rem;
   margin: 0.5rem;
   padding: 0.5rem;
-  height: 42px;
+  height: 2.62rem;
 }
 
 .product__button_buy {
@@ -63,14 +63,3 @@
 .product__button_add-item_mark {
   font-size: 2rem;
 }
-
-/* .product__button_add-item::after {
-  content: "+";
-  position: relative;
-}
-
-.product__button_add-item::before {
-  content: "-";
-  position: relative;
-  font-size: 2rem;
-} */

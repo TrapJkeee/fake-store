@@ -14,7 +14,7 @@
 .carts__body {
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  gap: 2.5rem;
   padding-bottom: 5rem;
 }
 
@@ -32,11 +32,11 @@
 .carts__group {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  width: 860px;
+  gap: 1.5rem;
+  width: 53.75rem;
 }
 @media screen and (max-width: 769px) {
   .carts__group {
-    width: 500px;
+    width: 31.25rem;
   }
 }

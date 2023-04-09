@@ -1,7 +1,6 @@
 .card-header__body {
   display: flex;
   justify-content: space-between;
-
   padding-top: 2.5rem;
 }
 .card-header__body_chain {
