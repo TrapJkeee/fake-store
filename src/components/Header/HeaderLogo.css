@@ -9,14 +9,18 @@
   object-fit: cover;
   width: 2.5rem;
   height: 100%;
-  align-self: center;
 }
 .header__logo-title {
   color: black;
   text-transform: uppercase;
 }
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 720px) {
   .header__logo-title {
     display: none;
+  }
+}
+@media screen and (max-width: 676px) {
+  .header__logo {
+    padding-right: 0.5rem;
   }
 }

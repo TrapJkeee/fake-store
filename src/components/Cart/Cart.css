@@ -15,7 +15,6 @@
   .cart__info {
     justify-content: flex-start;
     flex-grow: 1;
-
     flex-wrap: wrap;
   }
 }
@@ -48,8 +47,7 @@
     width: 100px;
   }
 }
-.cart__title {
-}
+
 .cart__subtitle {
   font-weight: 700;
   font-size: 12px;

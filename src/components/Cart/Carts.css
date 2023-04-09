@@ -2,18 +2,31 @@
   font-weight: 700;
   font-size: 4rem;
   color: var(--black);
-  padding-top: 24px;
+  padding: 1.5rem 0 2.5rem;
 }
+
+@media screen and (max-width: 769px) {
+  .carts__title {
+    padding-left: 1rem;
+  }
+}
+
 .carts__body {
   display: flex;
   justify-content: space-between;
   gap: 40px;
-  padding: 60px 0;
+  padding-bottom: 5rem;
 }
+
 @media screen and (max-width: 769px) {
   .carts__body {
     justify-content: center;
     flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 650px) {
+  .carts__body {
+    padding: 0 1rem 5rem;
   }
 }
 .carts__group {

@@ -1,16 +1,19 @@
 .footer__links {
-  /* display: flex; */
   flex: 1 1 auto;
 }
 .footer__links-body {
   display: flex;
   justify-content: flex-start;
-
   gap: 3rem;
 }
 
+@media screen and (max-width: 649px) {
+  .footer__links-body {
+    gap: 1rem;
+  }
+}
+
 .footer__link {
-  line-height: 150%;
   color: var(--black);
   cursor: pointer;
 }

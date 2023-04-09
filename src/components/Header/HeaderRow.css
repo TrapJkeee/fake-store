@@ -4,15 +4,15 @@
   align-items: center;
   height: 100%;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 769px) {
   .header__row {
-    /* justify-content: center; */
-    /* gap: 0.5rem; */
+    padding: 0 1rem;
   }
 }
 
 @media screen and (max-width: 650px) {
   .header__row {
+    padding-top: 0.5rem;
     flex-wrap: wrap;
   }
 }

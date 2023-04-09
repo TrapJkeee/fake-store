@@ -3,7 +3,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: 12.8rem; */
   gap: 1.5rem;
 }
 .header__menu-body {
@@ -53,15 +52,6 @@
 .header__menu-body:hover > .header__menu-title {
   color: var(--secondary);
 }
-/* .header__menu-body:active > .header__menu-title {
-  color: var(--secondary);
-} */
-
-@media screen and (max-width: 760px) {
-  .header__menu-group {
-    order: 2;
-  }
-}
 
 .active > .header__menu-title {
   color: var(--secondary);
@@ -69,4 +59,15 @@
 
 .active > .header__menu-svg > svg > path {
   fill: var(--secondary);
+}
+
+@media screen and (max-width: 760px) {
+  .header__menu-group {
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .header__menu-group {
+  }
 }

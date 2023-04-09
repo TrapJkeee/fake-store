@@ -1,6 +1,6 @@
 .header__catalog-body {
   display: flex;
-  width: 7.5rem;
+  width: 100px;
   height: 2.5rem;
   background-color: var(--primery);
   border-radius: 0.25rem;
@@ -28,7 +28,7 @@
     width: 40px;
   }
   .header__catalog-title {
-    /* display: none; */
+    display: none;
   }
 }
 

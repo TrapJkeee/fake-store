@@ -1,8 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import DawSVG from "../../assets/svg/DawSVG";
-import "./HeaderMenuUser.css";
 import { userActions } from "../../store/user-slice";
+import avatar from "../../assets/avatar.png";
+import "./HeaderMenuUser.css";
+
 const HeaderMenuUser = () => {
   const [isClickToggle, setIsClickToggle] = useState(false);
   const email = useSelector((state) => state.user.email);
@@ -23,6 +25,9 @@ const HeaderMenuUser = () => {
     <>
       <div className="header__user" onClick={clickHandler}>
         <ul className={styles}>
+          <li className="header__user-img">
+            {/* <img src={"#"} alt="avatar" /> */}
+          </li>
           <li className="header__user-name">{email}</li>
           <li className="header__user-icon">
             <DawSVG />
