@@ -41,8 +41,8 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        {/* <Route index path="/" element={<Navigate to="catalog" />} /> */}
-        <Route index path="/" element={<CatalogPage />} />
+        <Route index path="/" element={<Navigate to="catalog" />} />
+        <Route path="/catalog" element={<CatalogPage />} />
         <Route path="category/:category" element={<CategoryPage />} />
         <Route path=":category/:title" element={<ProductInfoPage />} />
         <Route path="cart" element={<CartPage />} />
