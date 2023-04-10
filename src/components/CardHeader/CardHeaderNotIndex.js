@@ -10,6 +10,10 @@ const CardHeaderNotIndex = () => {
   const products = useSelector((state) => state.products.products);
   const currentProduct = products.find((item) => item.title === params.title);
 
+  if (!currentProduct) {
+    return;
+  }
+
   if (location.pathname === "/catalog") {
     return (
       <div className="card-header">

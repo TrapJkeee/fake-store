@@ -39,7 +39,7 @@ const ModalWindow = ({ onHideCartHandel }) => {
         );
         dispatch(modalActions.closeModal());
       })
-      .catch(console.error);
+      .catch((e) => alert(e));
   };
 
   const registerHandler = (e) => {
@@ -48,17 +48,17 @@ const ModalWindow = ({ onHideCartHandel }) => {
     const auth = getAuth();
 
     createUserWithEmailAndPassword(auth, email, password)
-      .then(({ user }) => {})
-      .catch(console.error);
-
-    setIsRegistration(true);
-    setIsClickOnRegistration(false);
+      .then(() => {
+        setIsRegistration(true);
+        setIsClickOnRegistration(false);
+      })
+      .catch((e) => alert(e));
   };
   const modalEnter = (
     <>
       <div className="modal__title">Вход</div>
       <form className="modal__data" onSubmit={loginHandler}>
-        <label for="email" className="modal__label">
+        <label htmlFor="email" className="modal__label">
           Почта
         </label>
         <input
@@ -69,7 +69,7 @@ const ModalWindow = ({ onHideCartHandel }) => {
           className="modal__input"
           onChange={(e) => setEmail(e.target.value)}
         />
-        <label for="password" className="modal__label">
+        <label htmlFor="password" className="modal__label">
           Пароль
         </label>
 
@@ -96,18 +96,18 @@ const ModalWindow = ({ onHideCartHandel }) => {
     <>
       <div className="modal__title">Регистрация</div>
       <form className="modal__data" onSubmit={registerHandler}>
-        <label for="email" className="modal__label">
+        <label htmlFor="email" className="modal__label">
           Почта
         </label>
         <input
           id="email"
-          type="text"
+          type="email"
           name="email"
           placeholder="e-mail"
           className="modal__input"
           onChange={(e) => setEmail(e.target.value)}
         />
-        <label for="password" className="modal__label">
+        <label htmlFor="password" className="modal__label">
           Пароль
         </label>
 
@@ -119,13 +119,7 @@ const ModalWindow = ({ onHideCartHandel }) => {
           className="modal__input"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button
-          // type="button"
-          className="modal__button"
-          // onClick={() => setIsRegistration(true)}
-        >
-          Зарегистрироваться
-        </button>
+        <button className="modal__button">Зарегистрироваться</button>
       </form>
     </>
   );

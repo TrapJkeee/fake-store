@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "./store/products-slice";
 import { Navigate, Route, Routes } from "react-router-dom";
+import { sendOrder } from "./store/sendOrder-slice";
+import { getOrder } from "./store/getOrder-slice";
 
 import Layout from "./components/UI/Layout";
 import CatalogPage from "./components/pages/CatalogPage";
@@ -10,8 +12,6 @@ import ProductInfoPage from "./components/pages/ProductInfoPage";
 import NotFoundPage from "./components/pages/NotFoundPage";
 import CartPage from "./components/pages/CartPage";
 import OrderPage from "./components/pages/OrderPage";
-import { sendOrder } from "./store/sendOrder-slice";
-import { getOrder } from "./store/getOrder-slice";
 
 function App() {
   const dispatch = useDispatch();
@@ -41,8 +41,8 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index path="/" element={<Navigate to="catalog" />} />
-        <Route path="catalog" element={<CatalogPage />} />
+        {/* <Route index path="/" element={<Navigate to="catalog" />} /> */}
+        <Route index path="/" element={<CatalogPage />} />
         <Route path="category/:category" element={<CategoryPage />} />
         <Route path=":category/:title" element={<ProductInfoPage />} />
         <Route path="cart" element={<CartPage />} />

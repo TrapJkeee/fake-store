@@ -25,7 +25,7 @@ const Product = ({ id, title, img, price, category, quantity }) => {
       >
         -
       </span>
-      <span>{currentItem.quantity}</span>
+      <span className="product__button_animate">{currentItem.quantity}</span>
       <span className="product__button_add-item_mark" onClick={addItemHandler}>
         +
       </span>

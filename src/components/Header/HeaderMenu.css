@@ -66,8 +66,3 @@
     order: 2;
   }
 }
-
-@media screen and (max-width: 650px) {
-  .header__menu-group {
-  }
-}

@@ -65,6 +65,10 @@
   border-radius: 4px;
   color: var(--white);
 }
+
+.cart__button:active > .cart__button_animate {
+  transform: scale(150%);
+}
 .cart__total {
   font-weight: 700;
   font-size: 1.2rem;

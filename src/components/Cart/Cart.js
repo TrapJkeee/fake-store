@@ -30,7 +30,7 @@ const Cart = ({ id, title, price, totalPrice, img, quantity }) => {
               <span className="cart__button_mark" onClick={minusItemHandler}>
                 -
               </span>
-              <span>{quantity}</span>
+              <span className="cart__button_animate">{quantity}</span>
               <span className="cart__button_mark" onClick={plusItemHandler}>
                 +
               </span>

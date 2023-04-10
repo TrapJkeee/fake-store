@@ -88,6 +88,10 @@
   font-size: 2rem;
 }
 
+.product-info__button-add-item:active > .product-info__button_animate {
+  transform: scale(150%);
+}
+
 .product-info__text {
   max-width: 23.5rem;
   color: var(--black);

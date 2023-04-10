@@ -34,7 +34,9 @@ const ProductInfoBody = () => {
       >
         -
       </span>
-      <span>{currentItem.quantity}</span>
+      <span className="product-info__button_animate">
+        {currentItem.quantity}
+      </span>
       <span className="product__button_add-item_mark" onClick={addItemHandler}>
         +
       </span>

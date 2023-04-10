@@ -60,6 +60,11 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .product__button_add-item_mark {
   font-size: 2rem;
+}
+
+.product__button_add-item:active > .product__button_animate {
+  transform: scale(200%);
 }
